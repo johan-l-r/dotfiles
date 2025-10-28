@@ -15,26 +15,20 @@ return {
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<Tab>"] = { "accept", "fallback" },
       },
+      fuzzy = {
+        implementation = "lua", 
+      },
 
       sources = {
         default = { "lsp", "path", "buffer", "snippets" },
       },
-
-      windows = {
-        completion = {
-          border = true,
-        },
+      completion = {
         documentation = {
-          border = true,
           auto_show = true,
-          auto_show_delay_ms = 1000, -- 1 second delay
-        },
-        signature_help = {
-          border = true,
-          enabled = true,
-        },
-      },
+        }
+      }
     })
+
 
     -- Load VSCode-style snippets from friendly-snippets
     require("luasnip.loaders.from_vscode").lazy_load()

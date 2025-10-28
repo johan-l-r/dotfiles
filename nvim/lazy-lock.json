@@ -1,4 +1,7 @@
 {
-  "lazy.nvim": { "branch": "main", "commit": "db067881fff0fd4be8c00e5bde7492e0e1c77a2f" },
+  "LuaSnip": { "branch": "master", "commit": "ccf25a5452b8697a823de3e5ecda63ed3d723b79" },
+  "blink.cmp": { "branch": "main", "commit": "312097b9e34e45e430d55968cef014b88e6e3549" },
+  "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
+  "lazy.nvim": { "branch": "main", "commit": "ed4dc336a73c18da6fea6e1cf7ad6e1b76d281eb" },
   "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" }
 }
