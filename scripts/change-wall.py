@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import argparse as ap
 from time import sleep
 import random
@@ -14,23 +12,27 @@ path = args.path
 
 # start hyprpaper
 os.system("hyprpaper &")
+sleep(1)
 
 def load_walls():
   for wall in os.listdir(args.path):
     walls.append(wall)
 
-load_walls()
-
-while True:
+def set_wall():
   rand_wall = random.randint(0, len(walls) - 1)
+  wall_path = f"{args.path}/{walls[rand_wall]}"
 
-  # set the wallpaper 
-  os.system(f'hyprctl hyprpaper reload ,"{path}/{walls[rand_wall]}"')
-
-  sleep(300)
-
-  # remove used wallpaper so it does not show again 
+  os.system(f'hyprctl hyprpaper reload ,"{wall_path}"')
   walls.pop(rand_wall)
 
   if len(walls) == 0: 
     load_walls()
+
+load_walls()
+set_wall()
+
+while True:
+  sleep(300)
+
+  set_wall()
+
