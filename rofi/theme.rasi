@@ -1,0 +1,42 @@
+// this is not like CSS haha
+// the * selector is used to set custom properties like :root 
+* {
+  normal-bg: rgba(8, 8, 8, 0.6);
+  selected-bg: rgba(254, 254, 254, 0.1);
+}
+// widgets 
+window {
+  transparency: "real";
+  location: west;
+  x-offset: 20px;
+  background-color: var(normal-bg);
+  width: 500px;
+  padding: 2em;
+}
+mode-switcher {
+  background-color: rebeccapurple;
+}
+listview {
+  flow: horizontal;
+  columns: 4;
+  lines: 8;
+  scrollbar: false;
+}
+element {
+  orientation: vertical;
+}
+element-icon {
+  size: 2em;
+  padding: 20px;
+}
+element-text {
+  enabled: false;
+}
+// set background for all elements 
+element normal normal, 
+element alternate normal { 
+  background-color: transparent;
+}
+element selected normal {
+  background-color: var(selected-bg);
+}
